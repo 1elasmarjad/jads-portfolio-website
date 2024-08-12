@@ -1,4 +1,6 @@
-import { Linkedin, Rocket } from "lucide-react";
+import { ExternalLinkIcon, Linkedin, Rocket } from "lucide-react";
+import Link from "next/link";
+import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import NavItem from "~/components/ui/navitem";
 import { env } from "~/env";
@@ -12,7 +14,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-4">
               <h1 className="text-5xl font-bold">Jad El Asmar</h1>
               <h2 className="flex items-center text-lg font-semibold text-foreground/90">
-                Full-stack Developer <Rocket size="18" className="ml-2" />
+                Full-Stack Developer <Rocket size="18" className="ml-2" />
               </h2>
               <p className="text-foreground/80">
                 I create seamless and scalable
@@ -27,7 +29,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <footer className="flex flex-col">
             <a href={`mailto:${env.NEXT_PUBLIC_EMAIL}`}>
               <Button className="mb-8 w-full" variant="secondary">
                 Contact Me
@@ -60,7 +62,7 @@ export default function HomePage() {
               </li>
             </ul>
 
-            <div className="mt-4 flex gap-5 text-sm">
+            <div className="mt-6 flex gap-5 text-sm">
               <a href={`tel:${env.NEXT_PUBLIC_PHONE}`}>
                 {env.NEXT_PUBLIC_PHONE}
               </a>
@@ -68,7 +70,7 @@ export default function HomePage() {
                 {env.NEXT_PUBLIC_EMAIL}
               </a>
             </div>
-          </div>
+          </footer>
         </header>
 
         <div className="py-20 text-foreground/75 lg:w-1/2">
@@ -96,8 +98,62 @@ export default function HomePage() {
             </p>
           </section>
 
-          <section className="flex flex-col gap-6">
-            <div></div>
+          <section className="mt-20 flex flex-col gap-16">
+            <div className="flex flex-col">
+              <h3 className="mb-1 font-semibold text-foreground">
+                Founder & Developer · Discord Bot (Self Employed)
+              </h3>
+              <h3 className="mb-3 text-sm">2021 — Present</h3>
+              <p className="text-sm">
+                Founder and sole-developer of a card-collecting discord bot that
+                interacts with the discord API with{" "}
+                <strong className="text-foreground">40,000+</strong> users. The
+                bot is written in{" "}
+                <strong className="text-foreground">Python</strong>, uses{" "}
+                <strong className="text-foreground">MongoDB</strong> as a
+                database, and is hosted on{" "}
+                <strong className="text-foreground">
+                  Google Cloud Platform
+                </strong>
+                .
+              </p>
+              <ul className="mt-3 flex gap-2">
+                <Badge>Python</Badge>
+                <Badge>MongoDB</Badge>
+                <Badge>GCP</Badge>
+                <Badge>Stripe</Badge>
+              </ul>
+            </div>
+
+            <Link className="flex flex-col hover:cursor-pointer" href={"https://www.diffcord.com"} target="_blank">
+              <h3 className="mb-1 font-semibold text-foreground flex gap-2 items-center">
+                Co-Founder & Developer · Diffcord <ExternalLinkIcon size="18"/>
+              </h3>
+              <h3 className="mb-3 text-sm">March 2021 — September 2023</h3>
+              <p className="text-sm">
+                Co-Founder and developer of a SaaS product that helps discord
+                bot owners generate revenue from advertisements. The platform
+                amassed <strong className="text-foreground">15,000+</strong>{" "}
+                active users in the first 2 weeks. The platform uses{" "}
+                <strong className="text-foreground">Stripe/PayPal</strong> for
+                payments, <strong className="text-foreground">MySQL</strong> as
+                a database. The platform is written in{" "}
+                <strong className="text-foreground">Node.js</strong> and{" "}
+                <strong className="text-foreground">React</strong>, using the{" "}
+                <strong className="text-foreground">Next.js</strong> framework.{" "}
+                <strong className="text-foreground">Go</strong> is for some
+                microservices.
+              </p>
+              <ul className="mt-3 flex gap-2">
+                <Badge>Node.js</Badge>
+                <Badge>React</Badge>
+                <Badge>Next.js</Badge>
+                <Badge>Go</Badge>
+                <Badge>MySQL</Badge>
+                <Badge>Stripe</Badge>
+                <Badge>PayPal</Badge>
+              </ul>
+            </Link>
           </section>
         </div>
       </div>

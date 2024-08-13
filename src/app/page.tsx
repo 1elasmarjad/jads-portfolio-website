@@ -5,12 +5,17 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import NavItem from "~/components/ui/navitem";
 import { env } from "~/env";
+import Image from "next/image";
+import WorldeImage from "images/wordle.png";
+import PatreonDiscordBot from "images/patreon-discord-bot.png";
+import OTPSharer from "images/otp-sharer.png";
+import ColorSwitch from "images/color-switch.png";
 
 export default function HomePage() {
   return (
     <main className="flex w-full flex-col items-center">
-      <div className="flex w-full justify-between gap-24 px-12 lg:max-w-6xl">
-        <header className="flex flex-col py-20 lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:justify-between">
+      <div className="flex w-full flex-col justify-between px-4 lg:max-w-6xl lg:flex-row lg:gap-24 lg:px-12">
+        <header className="flex flex-col px-2.5 py-12 lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:justify-between lg:px-0 lg:py-20">
           <div className="flex flex-col">
             <div className="flex flex-col gap-4">
               <h1 className="text-5xl font-bold">Jad El Asmar</h1>
@@ -23,7 +28,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-20 flex flex-col gap-5">
+            <div className="mt-20 hidden flex-col gap-5 lg:flex">
               <NavItem activated={true} text={"about"} />
               <NavItem activated={false} text={"education"} />
               <NavItem activated={false} text={"experience"} />
@@ -33,7 +38,7 @@ export default function HomePage() {
 
           <footer className="flex flex-col">
             <a href={`mailto:${env.NEXT_PUBLIC_EMAIL}`}>
-              <Button className="mb-8 w-full" variant="secondary">
+              <Button className="mb-8 mt-8 w-full lg:mt-0" variant="secondary">
                 Contact Me
               </Button>
             </a>
@@ -76,7 +81,10 @@ export default function HomePage() {
         </header>
 
         <div className="py-20 text-foreground/75 lg:w-[60%]">
-          <section className="px-6">
+          <section className="px-2.5 lg:px-6">
+            <h2 className="mb-4 block font-bold text-foreground lg:mb-0 lg:hidden">
+              ABOUT
+            </h2>
             <p>
               I’m a dedicated and forward-thinking software developer with a
               passion for creating innovative solutions.
@@ -100,117 +108,237 @@ export default function HomePage() {
             </p>
           </section>
 
-          <section className="mt-28 flex flex-col gap-10">
-            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
-              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
-                Bachelor of Science · University of Toronto
-              </h3>
-              <h3 className="mb-3 text-sm">September 2021 — Present</h3>
-              <p className="text-sm">
-                Pursuing a Major in{" "}
-                <strong>Geographic Information Systems</strong> and a minor in{" "}
-                <strong>Computer Science</strong> and{" "}
-                <strong>Statistics</strong>. I have taken courses in Software
-                Design, Software Tools & Systems Programming, etc.
-              </p>
-              <ul className="mt-3 flex gap-2">
-                <Badge>3.4 GPA</Badge>
-                <Badge>Computer Science</Badge>
-                <Badge>GIS</Badge>
-                <Badge>Statistics</Badge>
-              </ul>
-            </div>
+          <section className="mt-28">
+            <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
+              EDUCATION
+            </h2>
+            <div className="flex flex-col gap-10">
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                  Bachelor of Science · University of Toronto
+                </h3>
+                <h3 className="mb-3 text-sm">September 2021 — Present</h3>
+                <p className="text-sm">
+                  Pursuing a Major in{" "}
+                  <strong>Geographic Information Systems</strong> and a minor in{" "}
+                  <strong>Computer Science</strong> and{" "}
+                  <strong>Statistics</strong>. I have taken courses in Software
+                  Design, Software Tools, Systems Programming, etc.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>3.4 GPA</Badge>
+                  <Badge>Computer Science</Badge>
+                  <Badge>GIS</Badge>
+                  <Badge>Statistics</Badge>
+                </ul>
+              </div>
 
-            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
-              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
-                Secondary School Diploma · Garth Webb Secondary School
-              </h3>
-              <h3 className="mb-3 text-sm">September 2017 — July 2021</h3>
-              <p className="text-sm">
-                Graduated from Garth Webb Secondary School, Oakville ON, with
-                high honors. I was part of the{" "}
-                <strong>Computer Science Club</strong>. I took courses in
-                Computer Science, Calculus, Advanced Functions, etc.
-              </p>
-              <ul className="mt-3 flex gap-2">
-                <Badge>High Honors</Badge>
-              </ul>
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                  Secondary School Diploma · Garth Webb Secondary School
+                </h3>
+                <h3 className="mb-3 text-sm">September 2017 — July 2021</h3>
+                <p className="text-sm">
+                  Graduated from Garth Webb Secondary School, Oakville ON, with
+                  high honors. I was part of the{" "}
+                  <strong>Computer Science Club</strong>. I took courses in
+                  Computer Science, Calculus, Advanced Functions, etc.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>High Honors</Badge>
+                </ul>
+              </div>
             </div>
           </section>
 
-          <section className="mt-28 flex flex-col gap-10">
-            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
-              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
-                Founder & Developer · Discord Bot (Self Employed)
-              </h3>
-              <h3 className="mb-3 text-sm">April 2021 — Present</h3>
-              <p className="text-sm">
-                Founder and sole-developer of a card-collecting discord bot that
-                interacts with the discord API with{" "}
-                <strong className="text-foreground">40,000+</strong> users. In
-                addition to the core functionality of card collection, the bot
-                features advanced image generation for custom cards, efficient
-                caching mechanisms to ensure fast response times, and a scalable
-                architecture designed to handle the growing user base.
-              </p>
-              <ul className="mt-3 flex gap-2">
-                <Badge>Python</Badge>
-                <Badge>MongoDB</Badge>
-                <Badge>GCP</Badge>
-                <Badge>Stripe</Badge>
-              </ul>
-            </div>
+          <section className="mt-28">
+            <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
+              EXPERIENCE
+            </h2>
 
+            <div className="flex flex-col gap-10">
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                  Founder & Developer · Discord Bot (Self Employed)
+                </h3>
+                <h3 className="mb-3 text-sm">April 2021 — Present</h3>
+                <p className="text-sm">
+                  Founder and sole-developer of a card-collecting discord bot
+                  that interacts with the discord API with{" "}
+                  <strong className="text-foreground">40,000+</strong> users. In
+                  addition to the core functionality of card collection, the bot
+                  features advanced image generation for custom cards, efficient
+                  caching mechanisms to ensure fast response times, and a
+                  scalable architecture designed to handle the growing user
+                  base.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Python</Badge>
+                  <Badge>MongoDB</Badge>
+                  <Badge>GCP</Badge>
+                  <Badge>Stripe</Badge>
+                </ul>
+              </div>
+
+              <Link
+                className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                href={"https://www.diffcord.com"}
+                target="_blank"
+              >
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  Co-Founder & Developer · Diffcord{" "}
+                  <ExternalLinkIcon size="18" />
+                </h3>
+                <h3 className="mb-3 text-sm">March 2023 — September 2023</h3>
+                <p className="text-sm">
+                  Co-Founder and developer of a SaaS product that helps discord
+                  bot owners generate revenue from advertisements. The platform
+                  amassed <strong className="text-foreground">15,000+</strong>{" "}
+                  active users in the first 2 weeks. Built with a scalable
+                  architecture deployed on Vercel, the platform also leverages
+                  Google Cloud Platform (GCP) for microservices. It integrates
+                  with Stripe and PayPal to handle payouts and payments.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Node.js</Badge>
+                  <Badge>React</Badge>
+                  <Badge>Next.js</Badge>
+                  <Badge>Go</Badge>
+                  <Badge>MySQL</Badge>
+                  <Badge>PayPal</Badge>
+                  <Badge>Tailwind</Badge>
+                </ul>
+              </Link>
+
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                  Line Cook · Turtle Jack's Muskoka Grill
+                </h3>
+                <h3 className="mb-3 text-sm">July 2021 — June 2022</h3>
+                <p className="text-sm">
+                  Line cook at Turtle Jack's Muskoka Grill, Burlington ON.
+                  Multi-tasked to meet customer demands, prepared food items
+                  consistently and adhered to all recipe standards. Developed
+                  creative menu ideas and implemented them.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Cooking</Badge>
+                  <Badge>Speed</Badge>
+                  <Badge>High-Pressure</Badge>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-28 flex flex-col gap-8">
             <Link
-              className="group flex flex-col rounded-md px-6 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10"
-              href={"https://www.diffcord.com"}
+              href="https://multiplayer-wordle-five.vercel.app/"
               target="_blank"
+              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
             >
-              <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                Co-Founder & Developer · Diffcord <ExternalLinkIcon size="18" />
-              </h3>
-              <h3 className="mb-3 text-sm">March 2023 — September 2023</h3>
-              <p className="text-sm">
-                Co-Founder and developer of a SaaS product that helps discord
-                bot owners generate revenue from advertisements. The platform
-                amassed <strong className="text-foreground">15,000+</strong>{" "}
-                active users in the first 2 weeks. Built with a scalable
-                architecture deployed on Vercel, the platform also leverages
-                Google Cloud Platform (GCP) for microservices. It integrates
-                with Stripe and PayPal to handle payouts and payments.
-              </p>
-              <ul className="mt-3 flex gap-2">
-                <Badge>Node.js</Badge>
-                <Badge>React</Badge>
-                <Badge>Next.js</Badge>
-                <Badge>Go</Badge>
-                <Badge>MySQL</Badge>
-                <Badge>PayPal</Badge>
-                <Badge>Tailwind</Badge>
-              </ul>
+              <Image
+                src={WorldeImage}
+                alt={"Worlde Image"}
+                className="w-[30%] object-scale-down"
+              />
+              <div className="w-[70%]">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  Multiplayer Worlde <ExternalLinkIcon size="18" />
+                </h3>
+                <p className="text-sm">
+                  A multiplayer version of the popular game Wordle. Users can
+                  create a room and play with their friends. The game takes
+                  advantage of polling to ensure real-time updates for all
+                  players.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Next.js</Badge>
+                  <Badge>MongoDB</Badge>
+                  <Badge>Tailwind</Badge>
+                </ul>
+              </div>
             </Link>
 
-            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
-              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
-                Line Cook · Turtle Jack's Muskoka Grill
-              </h3>
-              <h3 className="mb-3 text-sm">July 2021 — June 2022</h3>
-              <p className="text-sm">
-                Line cook at Turtle Jack's Muskoka Grill, Burlington ON.
-                Multi-tasked to meet customer demands, prepared food items
-                consistently and adhered to all recipe standards. Developed
-                creative menu ideas and implemented them.
-              </p>
-              <ul className="mt-3 flex gap-2">
-                <Badge>Cooking</Badge>
-                <Badge>Speed</Badge>
-                <Badge>High-Pressure</Badge>
-              </ul>
-            </div>
-          </section>
+            <Link
+              href="https://github.com/1elasmarjad/patreon-discord-bot"
+              target="_blank"
+              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+            >
+              <Image
+                src={PatreonDiscordBot}
+                alt={"Patron Discord Bot Image"}
+                className="w-[30%] object-scale-down"
+              />
+              <div className="w-[70%]">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  Patreon Discord Bot <ExternalLinkIcon size="18" />
+                </h3>
+                <p className="text-sm">
+                  A cli tool that allows discord bot owners to easily integrate
+                  their bot with Patreon. The tool allows bot owners to manually
+                  sync roles from patreon and find patreon information given a
+                  discord user id.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Python</Badge>
+                </ul>
+              </div>
+            </Link>
 
-          <section className="mt-28 px-6">
-            <Link href=""></Link>
+            <Link
+              href="https://otp-sharer.vercel.app/"
+              target="_blank"
+              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+            >
+              <Image
+                src={OTPSharer}
+                alt={"OTP Sharer Image"}
+                className="w-[30%] object-scale-down"
+              />
+              <div className="w-[70%]">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  OneTime Password Sharer <ExternalLinkIcon size="18" />
+                </h3>
+                <p className="text-sm">
+                  Creates a one time password and allows your friends & family
+                  to be notified whenever you access this code after its
+                  creation. This can be useful for setting screen-time passwords
+                  on IOS and ensuring that you don't cheat.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Next.js</Badge>
+                  <Badge>SQLite</Badge>
+                  <Badge>Auth</Badge>
+                </ul>
+              </div>
+            </Link>
+
+            <Link
+              href="https://www.fortnite.com/@pumpie"
+              target="_blank"
+              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+            >
+              <Image
+                src={ColorSwitch}
+                alt={"Fortnite Maps Image"}
+                className="w-[30%] object-scale-down"
+              />
+              <div className="w-[70%]">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  Fortnite Maps <ExternalLinkIcon size="18" />
+                </h3>
+                <p className="text-sm">
+                  Created several Fortnite maps using Unreal Engine and Verse.
+                  The maps have had over{" "}
+                  <strong className="text-foreground">100,000+</strong> plays
+                  and have been featured on the Fortnite homepage.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Unreal Engine</Badge>
+                  <Badge>Verse Lang</Badge>
+                </ul>
+              </div>
+            </Link>
           </section>
         </div>
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ExternalLinkIcon, Linkedin, Rocket } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
@@ -24,6 +25,7 @@ export default function HomePage() {
 
             <div className="mt-20 flex flex-col gap-5">
               <NavItem activated={true} text={"about"} />
+              <NavItem activated={false} text={"education"} />
               <NavItem activated={false} text={"experience"} />
               <NavItem activated={false} text={"projects"} />
             </div>
@@ -73,8 +75,8 @@ export default function HomePage() {
           </footer>
         </header>
 
-        <div className="py-20 text-foreground/75 lg:w-1/2">
-          <section>
+        <div className="py-20 text-foreground/75 lg:w-[60%]">
+          <section className="px-6">
             <p>
               I’m a dedicated and forward-thinking software developer with a
               passion for creating innovative solutions.
@@ -93,29 +95,63 @@ export default function HomePage() {
             </p>
             <br />
             <p>
-              At the end of the day, my goal is to work on things that can
+              At the end of the day, my goal is to work on software that can
               improve people’s lives and leave a positive dent.
             </p>
           </section>
 
-          <section className="mt-20 flex flex-col gap-16">
-            <div className="flex flex-col">
-              <h3 className="mb-1 font-semibold text-foreground">
+          <section className="mt-28 flex flex-col gap-10">
+            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
+              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                Bachelor of Science · University of Toronto
+              </h3>
+              <h3 className="mb-3 text-sm">September 2021 — Present</h3>
+              <p className="text-sm">
+                Pursuing a Major in{" "}
+                <strong>Geographic Information Systems</strong> and a minor in{" "}
+                <strong>Computer Science</strong> and{" "}
+                <strong>Statistics</strong>. I have taken courses in Software
+                Design, Software Tools & Systems Programming, etc.
+              </p>
+              <ul className="mt-3 flex gap-2">
+                <Badge>3.4 GPA</Badge>
+                <Badge>Computer Science</Badge>
+                <Badge>GIS</Badge>
+                <Badge>Statistics</Badge>
+              </ul>
+            </div>
+
+            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
+              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                Secondary School Diploma · Garth Webb Secondary School
+              </h3>
+              <h3 className="mb-3 text-sm">September 2017 — July 2021</h3>
+              <p className="text-sm">
+                Graduated from Garth Webb Secondary School, Oakville ON, with
+                high honors. I was part of the{" "}
+                <strong>Computer Science Club</strong>. I took courses in
+                Computer Science, Calculus, Advanced Functions, etc.
+              </p>
+              <ul className="mt-3 flex gap-2">
+                <Badge>High Honors</Badge>
+              </ul>
+            </div>
+          </section>
+
+          <section className="mt-28 flex flex-col gap-10">
+            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
+              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
                 Founder & Developer · Discord Bot (Self Employed)
               </h3>
-              <h3 className="mb-3 text-sm">2021 — Present</h3>
+              <h3 className="mb-3 text-sm">April 2021 — Present</h3>
               <p className="text-sm">
                 Founder and sole-developer of a card-collecting discord bot that
                 interacts with the discord API with{" "}
-                <strong className="text-foreground">40,000+</strong> users. The
-                bot is written in{" "}
-                <strong className="text-foreground">Python</strong>, uses{" "}
-                <strong className="text-foreground">MongoDB</strong> as a
-                database, and is hosted on{" "}
-                <strong className="text-foreground">
-                  Google Cloud Platform
-                </strong>
-                .
+                <strong className="text-foreground">40,000+</strong> users. In
+                addition to the core functionality of card collection, the bot
+                features advanced image generation for custom cards, efficient
+                caching mechanisms to ensure fast response times, and a scalable
+                architecture designed to handle the growing user base.
               </p>
               <ul className="mt-3 flex gap-2">
                 <Badge>Python</Badge>
@@ -125,24 +161,23 @@ export default function HomePage() {
               </ul>
             </div>
 
-            <Link className="flex flex-col hover:cursor-pointer" href={"https://www.diffcord.com"} target="_blank">
-              <h3 className="mb-1 font-semibold text-foreground flex gap-2 items-center">
-                Co-Founder & Developer · Diffcord <ExternalLinkIcon size="18"/>
+            <Link
+              className="group flex flex-col rounded-md px-6 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10"
+              href={"https://www.diffcord.com"}
+              target="_blank"
+            >
+              <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                Co-Founder & Developer · Diffcord <ExternalLinkIcon size="18" />
               </h3>
-              <h3 className="mb-3 text-sm">March 2021 — September 2023</h3>
+              <h3 className="mb-3 text-sm">March 2023 — September 2023</h3>
               <p className="text-sm">
                 Co-Founder and developer of a SaaS product that helps discord
                 bot owners generate revenue from advertisements. The platform
                 amassed <strong className="text-foreground">15,000+</strong>{" "}
-                active users in the first 2 weeks. The platform uses{" "}
-                <strong className="text-foreground">Stripe/PayPal</strong> for
-                payments, <strong className="text-foreground">MySQL</strong> as
-                a database. The platform is written in{" "}
-                <strong className="text-foreground">Node.js</strong> and{" "}
-                <strong className="text-foreground">React</strong>, using the{" "}
-                <strong className="text-foreground">Next.js</strong> framework.{" "}
-                <strong className="text-foreground">Go</strong> is for some
-                microservices.
+                active users in the first 2 weeks. Built with a scalable
+                architecture deployed on Vercel, the platform also leverages
+                Google Cloud Platform (GCP) for microservices. It integrates
+                with Stripe and PayPal to handle payouts and payments.
               </p>
               <ul className="mt-3 flex gap-2">
                 <Badge>Node.js</Badge>
@@ -150,10 +185,32 @@ export default function HomePage() {
                 <Badge>Next.js</Badge>
                 <Badge>Go</Badge>
                 <Badge>MySQL</Badge>
-                <Badge>Stripe</Badge>
                 <Badge>PayPal</Badge>
+                <Badge>Tailwind</Badge>
               </ul>
             </Link>
+
+            <div className="group flex flex-col rounded-md px-6 py-4 transition-all hover:bg-foreground/10">
+              <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+                Line Cook · Turtle Jack's Muskoka Grill
+              </h3>
+              <h3 className="mb-3 text-sm">July 2021 — June 2022</h3>
+              <p className="text-sm">
+                Line cook at Turtle Jack's Muskoka Grill, Burlington ON.
+                Multi-tasked to meet customer demands, prepared food items
+                consistently and adhered to all recipe standards. Developed
+                creative menu ideas and implemented them.
+              </p>
+              <ul className="mt-3 flex gap-2">
+                <Badge>Cooking</Badge>
+                <Badge>Speed</Badge>
+                <Badge>High-Pressure</Badge>
+              </ul>
+            </div>
+          </section>
+
+          <section className="mt-28 px-6">
+            <Link href=""></Link>
           </section>
         </div>
       </div>

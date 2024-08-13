@@ -24,8 +24,6 @@ export default function HomePage() {
   const handleScroll = () => {
     const newScrollYPosition = window.scrollY;
 
-    console.log(newScrollYPosition);
-
     if (newScrollYPosition === undefined || newScrollYPosition < 400) {
       setCurrentSection("about");
     } else if (newScrollYPosition < 1000) {

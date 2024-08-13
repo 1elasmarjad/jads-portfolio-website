@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react/no-unescaped-entities */
 import { ExternalLinkIcon, Linkedin, Rocket } from "lucide-react";
 import Link from "next/link";
@@ -10,15 +12,61 @@ import WorldeImage from "images/wordle.png";
 import PatreonDiscordBot from "images/patreon-discord-bot.png";
 import OTPSharer from "images/otp-sharer.png";
 import ColorSwitch from "images/color-switch.png";
+import FanFund from "images/fanfund.png";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { TextEffect } from "~/components/ui/texteffect";
 
 export default function HomePage() {
+  const [currentSection, setCurrentSection] = useState<
+    "about" | "education" | "experience" | "projects"
+  >("about");
+
+  const handleScroll = () => {
+    const newScrollYPosition = window.scrollY;
+
+    if (newScrollYPosition === undefined || newScrollYPosition < 400) {
+      setCurrentSection("about");
+    } else if (newScrollYPosition < 1000) {
+      setCurrentSection("education");
+    } else if (newScrollYPosition < 1800) {
+      setCurrentSection("experience");
+    } else {
+      setCurrentSection("projects");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      handleScroll(); // call it once to initialize the current section
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 100;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <main className="flex w-full flex-col items-center">
       <div className="flex w-full flex-col justify-between px-4 lg:max-w-6xl lg:flex-row lg:gap-24 lg:px-12">
         <header className="flex flex-col px-2.5 py-12 lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:justify-between lg:px-0 lg:py-20">
           <div className="flex flex-col">
             <div className="flex flex-col gap-4">
-              <h1 className="text-5xl font-bold">Jad El Asmar</h1>
+              <TextEffect className="text-5xl font-bold" preset="scale">
+                Jad El Asmar
+              </TextEffect>
               <h2 className="flex items-center text-lg font-semibold text-foreground/90">
                 Full-Stack Developer <Rocket size="18" className="ml-2" />
               </h2>
@@ -29,10 +77,26 @@ export default function HomePage() {
             </div>
 
             <div className="mt-20 hidden flex-col gap-5 lg:flex">
-              <NavItem activated={true} text={"about"} />
-              <NavItem activated={false} text={"education"} />
-              <NavItem activated={false} text={"experience"} />
-              <NavItem activated={false} text={"projects"} />
+              <NavItem
+                activated={currentSection === "about"}
+                text={"about"}
+                fn={() => scrollToSection("about")}
+              />
+              <NavItem
+                activated={currentSection === "education"}
+                text={"education"}
+                fn={() => scrollToSection("education")}
+              />
+              <NavItem
+                activated={currentSection === "experience"}
+                text={"experience"}
+                fn={() => scrollToSection("experience")}
+              />
+              <NavItem
+                activated={currentSection === "projects"}
+                text={"projects"}
+                fn={() => scrollToSection("projects")}
+              />
             </div>
           </div>
 
@@ -54,8 +118,8 @@ export default function HomePage() {
                     className="fill-foreground/70 transition-all hover:fill-foreground"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
                     />
                   </svg>
@@ -81,7 +145,7 @@ export default function HomePage() {
         </header>
 
         <div className="py-20 text-foreground/75 lg:w-[60%]">
-          <section className="px-2.5 lg:px-6">
+          <section className="px-2.5 lg:px-6" id="about">
             <h2 className="mb-4 block font-bold text-foreground lg:mb-0 lg:hidden">
               ABOUT
             </h2>
@@ -108,7 +172,7 @@ export default function HomePage() {
             </p>
           </section>
 
-          <section className="mt-28">
+          <section className="mt-28" id="education">
             <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
               EDUCATION
             </h2>
@@ -151,7 +215,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="mt-28">
+          <section className="mt-28" id="experience">
             <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
               EXPERIENCE
             </h2>
@@ -205,8 +269,8 @@ export default function HomePage() {
                   <Badge>Next.js</Badge>
                   <Badge>Go</Badge>
                   <Badge>MySQL</Badge>
-                  <Badge>PayPal</Badge>
-                  <Badge>Tailwind</Badge>
+                  <Badge className="hidden sm:block">PayPal</Badge>
+                  <Badge className="hidden lg:block">Tailwind</Badge>
                 </ul>
               </Link>
 
@@ -230,7 +294,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="mt-28 flex flex-col gap-8">
+          <section className="mt-28 flex flex-col gap-8" id="projects">
             <Link
               href="https://multiplayer-wordle-five.vercel.app/"
               target="_blank"
@@ -328,14 +392,42 @@ export default function HomePage() {
                   Fortnite Maps <ExternalLinkIcon size="18" />
                 </h3>
                 <p className="text-sm">
-                  Created several Fortnite maps using Unreal Engine and Verse.
-                  The maps have had over{" "}
+                  Created several Fortnite maps using Unreal Engine for Fortnite
+                  and Verse. The maps have had over{" "}
                   <strong className="text-foreground">100,000+</strong> plays
                   and have been featured on the Fortnite homepage.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>Unreal Engine</Badge>
                   <Badge>Verse Lang</Badge>
+                </ul>
+              </div>
+            </Link>
+
+            <Link
+              href="https://github.com/1elasmarjad/membership-platform"
+              target="_blank"
+              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+            >
+              <Image
+                src={FanFund}
+                alt={"FanFund Image"}
+                className="w-[30%] object-scale-down"
+              />
+              <div className="w-[70%]">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  FanFund Donate to Creators <ExternalLinkIcon size="18" />
+                </h3>
+                <p className="text-sm">
+                  Created a platform that allows fans to donate to creators
+                  using Stripe. The platform allows creators to create a page to
+                  accept donations and fans to donate to creators.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Next.js</Badge>
+                  <Badge>SQLlite</Badge>
+                  <Badge>Stripe</Badge>
+                  <Badge className="hidden">Auth</Badge>
                 </ul>
               </div>
             </Link>

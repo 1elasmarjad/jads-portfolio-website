@@ -293,143 +293,149 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="mt-28 flex flex-col gap-8" id="projects">
-            <Link
-              href="https://multiplayer-wordle-five.vercel.app/"
-              target="_blank"
-              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
-            >
-              <Image
-                src={WorldeImage}
-                alt={"Worlde Image"}
-                className="w-[30%] object-scale-down"
-              />
-              <div className="w-[70%]">
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                  Multiplayer Worlde <ExternalLinkIcon size="18" />
-                </h3>
-                <p className="text-sm">
-                  A multiplayer version of the popular game Wordle. Users can
-                  create a room and play with their friends. The game takes
-                  advantage of polling to ensure real-time updates for all
-                  players.
-                </p>
-                <ul className="mt-3 flex gap-2">
-                  <Badge>Next.js</Badge>
-                  <Badge>MongoDB</Badge>
-                  <Badge>Tailwind</Badge>
-                </ul>
-              </div>
-            </Link>
+          <section className="mt-28" id="projects">
+            <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
+              EXPERIENCE
+            </h2>
 
-            <Link
-              href="https://github.com/1elasmarjad/patreon-discord-bot"
-              target="_blank"
-              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
-            >
-              <Image
-                src={PatreonDiscordBot}
-                alt={"Patron Discord Bot Image"}
-                className="w-[30%] object-scale-down"
-              />
-              <div className="w-[70%]">
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                  Patreon Discord Bot <ExternalLinkIcon size="18" />
-                </h3>
-                <p className="text-sm">
-                  A cli tool that allows discord bot owners to easily integrate
-                  their bot with Patreon. The tool allows bot owners to manually
-                  sync roles from patreon and find patreon information given a
-                  discord user id.
-                </p>
-                <ul className="mt-3 flex gap-2">
-                  <Badge>Python</Badge>
-                </ul>
-              </div>
-            </Link>
+            <div className="flex flex-col gap-8">
+              <Link
+                href="https://multiplayer-wordle-five.vercel.app/"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={WorldeImage}
+                  alt={"Worlde Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    Multiplayer Worlde <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    A multiplayer version of the popular game Wordle. Users can
+                    create a room and play with their friends. The game takes
+                    advantage of polling to ensure real-time updates for all
+                    players.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Next.js</Badge>
+                    <Badge>MongoDB</Badge>
+                    <Badge>Tailwind</Badge>
+                  </ul>
+                </div>
+              </Link>
 
-            <Link
-              href="https://otp-sharer.vercel.app/"
-              target="_blank"
-              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
-            >
-              <Image
-                src={OTPSharer}
-                alt={"OTP Sharer Image"}
-                className="w-[30%] object-scale-down"
-              />
-              <div className="w-[70%]">
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                  OneTime Password Sharer <ExternalLinkIcon size="18" />
-                </h3>
-                <p className="text-sm">
-                  Generates a one time password and allows your friends & family
-                  to be notified whenever you access this code after its
-                  creation. This can be useful for setting screen-time passwords
-                  on IOS and ensuring that you don't cheat.
-                </p>
-                <ul className="mt-3 flex gap-2">
-                  <Badge>Next.js</Badge>
-                  <Badge>SQLite</Badge>
-                  <Badge>Auth</Badge>
-                </ul>
-              </div>
-            </Link>
+              <Link
+                href="https://github.com/1elasmarjad/patreon-discord-bot"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={PatreonDiscordBot}
+                  alt={"Patron Discord Bot Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    Patreon Discord Bot <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    A cli tool that allows discord bot owners to easily
+                    integrate their bot with Patreon. The tool allows bot owners
+                    to manually sync roles from patreon and find patreon
+                    information given a discord user id.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Python</Badge>
+                  </ul>
+                </div>
+              </Link>
 
-            <Link
-              href="https://www.fortnite.com/@pumpie"
-              target="_blank"
-              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
-            >
-              <Image
-                src={ColorSwitch}
-                alt={"Fortnite Maps Image"}
-                className="w-[30%] object-scale-down"
-              />
-              <div className="w-[70%]">
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                  Fortnite Maps <ExternalLinkIcon size="18" />
-                </h3>
-                <p className="text-sm">
-                  Created several Fortnite maps using Unreal Engine for Fortnite
-                  and Verse. The maps have had over{" "}
-                  <strong className="text-foreground">100,000+</strong> plays
-                  and have been featured on the Fortnite homepage.
-                </p>
-                <ul className="mt-3 flex gap-2">
-                  <Badge>Unreal Engine</Badge>
-                  <Badge>Verse Lang</Badge>
-                </ul>
-              </div>
-            </Link>
+              <Link
+                href="https://otp-sharer.vercel.app/"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={OTPSharer}
+                  alt={"OTP Sharer Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    OneTime Password Sharer <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    Generates a one time password and allows your friends &
+                    family to be notified whenever you access this code after
+                    its creation. This can be useful for setting screen-time
+                    passwords on IOS and ensuring that you don't cheat.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Next.js</Badge>
+                    <Badge>SQLite</Badge>
+                    <Badge>Auth</Badge>
+                  </ul>
+                </div>
+              </Link>
 
-            <Link
-              href="https://github.com/1elasmarjad/membership-platform"
-              target="_blank"
-              className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
-            >
-              <Image
-                src={FanFund}
-                alt={"FanFund Image"}
-                className="w-[30%] object-scale-down"
-              />
-              <div className="w-[70%]">
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                  FanFund Donate to Creators <ExternalLinkIcon size="18" />
-                </h3>
-                <p className="text-sm">
-                  A platform that allows fans to donate to creators
-                  using Stripe. The platform allows creators to create a page to
-                  accept donations and fans to donate to creators.
-                </p>
-                <ul className="mt-3 flex gap-2">
-                  <Badge>Next.js</Badge>
-                  <Badge>SQLlite</Badge>
-                  <Badge>Stripe</Badge>
-                  <Badge className="hidden">Auth</Badge>
-                </ul>
-              </div>
-            </Link>
+              <Link
+                href="https://www.fortnite.com/@pumpie"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={ColorSwitch}
+                  alt={"Fortnite Maps Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    Fortnite Maps <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    Created several Fortnite maps using Unreal Engine for
+                    Fortnite and Verse. The maps have had over{" "}
+                    <strong className="text-foreground">100,000+</strong> plays
+                    and have been featured on the Fortnite homepage.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Unreal Engine</Badge>
+                    <Badge>Verse Lang</Badge>
+                  </ul>
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/1elasmarjad/membership-platform"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={FanFund}
+                  alt={"FanFund Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    FanFund Donate to Creators <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    A platform that allows fans to donate to creators using
+                    Stripe. The platform allows creators to create a page to
+                    accept donations and fans to donate to creators.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Next.js</Badge>
+                    <Badge>SQLlite</Badge>
+                    <Badge>Stripe</Badge>
+                    <Badge className="hidden">Auth</Badge>
+                  </ul>
+                </div>
+              </Link>
+            </div>
           </section>
         </div>
       </div>

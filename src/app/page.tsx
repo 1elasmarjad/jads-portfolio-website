@@ -192,7 +192,7 @@ export default function HomePage() {
                   <Badge>3.4 GPA</Badge>
                   <Badge>Computer Science</Badge>
                   <Badge>GIS</Badge>
-                  <Badge>Statistics</Badge>
+                  <Badge>Stats</Badge>
                 </ul>
               </div>
 

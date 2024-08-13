@@ -5,8 +5,8 @@ import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Jad El Asmar",
-  description: "Jad's personal website",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  description: "Jad - Full Stack Developer",
+  icons: [{ rel: "icon", url: "/favicon.png" }],
 };
 
 const inter = Inter({

@@ -14,7 +14,6 @@ import OTPSharer from "images/otp-sharer.png";
 import ColorSwitch from "images/color-switch.png";
 import FanFund from "images/fanfund.png";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { TextEffect } from "~/components/ui/texteffect";
 
 export default function HomePage() {

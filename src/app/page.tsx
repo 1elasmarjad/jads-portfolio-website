@@ -364,7 +364,7 @@ export default function HomePage() {
                   OneTime Password Sharer <ExternalLinkIcon size="18" />
                 </h3>
                 <p className="text-sm">
-                  Creates a one time password and allows your friends & family
+                  Generates a one time password and allows your friends & family
                   to be notified whenever you access this code after its
                   creation. This can be useful for setting screen-time passwords
                   on IOS and ensuring that you don't cheat.
@@ -419,7 +419,7 @@ export default function HomePage() {
                   FanFund Donate to Creators <ExternalLinkIcon size="18" />
                 </h3>
                 <p className="text-sm">
-                  Created a platform that allows fans to donate to creators
+                  A platform that allows fans to donate to creators
                   using Stripe. The platform allows creators to create a page to
                   accept donations and fans to donate to creators.
                 </p>

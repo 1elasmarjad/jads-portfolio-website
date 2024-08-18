@@ -75,7 +75,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-20 hidden flex-col gap-5 lg:flex">
+            <div className="mt-14 mb-12 hidden flex-col gap-5 lg:flex">
               <NavItem
                 activated={currentSection === "about"}
                 text={"about"}

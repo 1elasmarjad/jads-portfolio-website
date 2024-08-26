@@ -150,7 +150,7 @@ export default function HomePage() {
               ABOUT
             </h2>
             <p>
-              I’m a dedicated and forward-thinking software developer with a
+              I’m a dedicated software developer, eager to learn with a
               passion for creating innovative solutions.
             </p>
             <br />
@@ -167,7 +167,7 @@ export default function HomePage() {
             </p>
             <br />
             <p>
-              At the end of the day, my goal is to work on software that can
+              My goal is to efficiently work on software that can
               improve people’s lives and leave a positive dent.
             </p>
           </section>

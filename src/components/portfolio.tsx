@@ -320,7 +320,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
 
           <section className="mt-28" id="projects">
             <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
-              EXPERIENCE
+              PROJECTS
             </h2>
 
             <div className="flex flex-col gap-8">

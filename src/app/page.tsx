@@ -64,7 +64,7 @@ export default function HomePage() {
         <header className="flex flex-col px-2.5 py-12 lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:justify-between lg:px-0 lg:py-20">
           <div className="flex flex-col">
             <div className="flex flex-col gap-4">
-              <TextEffect className="text-5xl font-bold" preset="scale">
+              <TextEffect className="text-5xl font-bold" preset="scale" as="h1">
                 Jad El Asmar
               </TextEffect>
               <h2 className="flex items-center text-lg font-semibold text-foreground/90">

@@ -13,6 +13,7 @@ import PatreonDiscordBot from "images/patreon-discord-bot.png";
 import OTPSharer from "images/otp-sharer.png";
 import ColorSwitch from "images/color-switch.png";
 import FanFund from "images/fanfund.png";
+import Gitmoji from "images/gitmoji.png";
 import { useEffect, useState } from "react";
 import { TextEffect } from "~/components/ui/texteffect";
 
@@ -75,7 +76,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-14 mb-12 hidden flex-col gap-5 lg:flex">
+            <div className="mb-12 mt-14 hidden flex-col gap-5 lg:flex">
               <NavItem
                 activated={currentSection === "about"}
                 text={"about"}
@@ -328,27 +329,28 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="https://github.com/1elasmarjad/patreon-discord-bot"
+                href="https://github.com/1elasmarjad/gitmoji-cli"
                 target="_blank"
                 className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
               >
                 <Image
-                  src={PatreonDiscordBot}
-                  alt={"Patron Discord Bot Image"}
+                  src={Gitmoji}
+                  alt={"GitMoji CLI Image"}
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
                   <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                    Patreon Discord Bot <ExternalLinkIcon size="18" />
+                    GitMoji AI <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
-                    A cli tool that allows discord bot owners to easily
-                    integrate their bot with Patreon. The tool allows bot owners
-                    to manually sync roles from patreon and find patreon
-                    information given a discord user id.
+                    A cli tool that turns lame git commit messages into
+                    expressive and fun messages using emojis. The tool uses
+                    natural language processing to understand the context of the
+                    commit message and suggest an emoji to add to the message.
                   </p>
                   <ul className="mt-3 flex gap-2">
-                    <Badge>Python</Badge>
+                    <Badge>Go</Badge>
+                    <Badge>AI</Badge>
                   </ul>
                 </div>
               </Link>
@@ -377,6 +379,32 @@ export default function HomePage() {
                     <Badge>Next.js</Badge>
                     <Badge>SQLite</Badge>
                     <Badge>Auth</Badge>
+                  </ul>
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/1elasmarjad/patreon-discord-bot"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={PatreonDiscordBot}
+                  alt={"Patron Discord Bot Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    Patreon Discord Bot <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    A cli tool that allows discord bot owners to easily
+                    integrate their bot with Patreon. The tool allows bot owners
+                    to manually sync roles from patreon and find patreon
+                    information given a discord user id.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Python</Badge>
                   </ul>
                 </div>
               </Link>

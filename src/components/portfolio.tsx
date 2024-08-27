@@ -199,8 +199,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   Pursuing a Major in{" "}
                   <strong>Geographic Information Systems</strong> and a minor in{" "}
                   <strong>Computer Science</strong> and{" "}
-                  <strong>Statistics</strong>. I have taken courses in Software
-                  Design, Software Tools, Systems Programming, etc.
+                  <strong>Statistics</strong>. I have taken courses in Spatial Data Science, Software
+                  Design, Software Tools, Systems Programming, Probability & Modeling, etc.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>3.4 GPA</Badge>
@@ -245,15 +245,20 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
             </h2>
 
             <div className="flex flex-col gap-10">
-              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
-                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
-                  Founder & Developer · Discord Bot (Self Employed)
+              <Link
+                className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                href={"https://top.gg/bot/785719830640328704"}
+                target="_blank"
+              >
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  Founder & Developer · Discord Bot{" "}
+                  <ExternalLinkIcon size="18" />
                 </h3>
                 <h3 className="mb-3 text-sm">April 2021 — Present</h3>
                 <p className="text-sm">
                   Founder and sole-developer of a card-collecting discord bot
                   that interacts with the discord API with{" "}
-                  <strong className="text-foreground">40,000+</strong> users. In
+                  <strong className="text-foreground">40,000+</strong> active users. In
                   addition to the core functionality of card collection, the bot
                   features advanced image generation for custom cards, efficient
                   caching mechanisms to ensure fast response times, and a
@@ -266,7 +271,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   <Badge>GCP</Badge>
                   <Badge>Stripe</Badge>
                 </ul>
-              </div>
+              </Link>
 
               <Link
                 className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"

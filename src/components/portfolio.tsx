@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable react/no-unescaped-entities */
-import { ExternalLinkIcon, Linkedin, Rocket } from "lucide-react";
+import { ExternalLinkIcon, Layers, Linkedin, Rocket } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -115,11 +115,13 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
           </div>
 
           <footer className="flex flex-col">
-            <a href={`mailto:${env.NEXT_PUBLIC_EMAIL}`}>
-              <Button className="mb-8 mt-8 w-full lg:mt-0" variant="secondary">
-                Contact Me
-              </Button>
-            </a>
+            <div className="my-8 flex flex-col gap-5">
+              <a href={`mailto:${env.NEXT_PUBLIC_EMAIL}`} className="grow">
+                <Button className="w-full lg:mt-0" variant="secondary">
+                  Contact Me
+                </Button>
+              </a>
+            </div>
 
             <ul className="flex gap-6">
               <li>
@@ -164,29 +166,38 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               ABOUT
             </h2>
             <p>
-              I’m a dedicated software developer, eager to learn with a passion
-              for creating innovative solutions.
+              I'm a software developer with a passion for turning ideas into
+              code and solving real problems.
             </p>
             <br />
             <p>
-              In 2017, I wrote my first line of code, sparked by the passion to
-              create video games and something that would make users smile. I
-              have been in love with programming ever since.
+              In 2017, I wrote my first line of code. I was convinced I was
+              creating the next big video game. (Plot twist: I wasn't). But that
+              was the start of my coding journey.
+            </p>
+
+            <br />
+            <p>
+              When I'm not coding, you can find me lifting weights, in the
+              boxing gym or diving into self improvement books and podcasts.
             </p>
             <br />
             <p>
-              Over the years, I have familiarized myself with: Front-End,
-              Back-End, Machine Learning, Algorithms, Databases, Embedded
-              Systems & more.
-            </p>
-            <br />
-            <p>
-              My goal is to efficiently work on software that can improve
-              people’s lives and leave a positive dent.
+              My goal? To build stuff that actually helps people that doesn't
+              suck. If I can leave behind some clean code and a smile, I'll call
+              it a win.
             </p>
           </section>
 
-          <section className="mt-28" id="education">
+          <div className="flex w-full justify-center">
+            <a href="/Jad El Asmar Resume.pdf" target="_blank">
+              <Button className="mt-6" variant="link">
+                My Resume <Layers className="ml-2.5" size="18" />
+              </Button>
+            </a>
+          </div>
+
+          <section className="mt-24" id="education">
             <h2 className="mb-4 block px-2.5 font-bold text-foreground lg:mb-0 lg:hidden lg:px-0">
               EDUCATION
             </h2>

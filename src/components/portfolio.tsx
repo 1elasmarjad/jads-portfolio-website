@@ -190,7 +190,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
           </section>
 
           <div className="flex w-full justify-center">
-            <a href="/Jad El Asmar Resume.pdf" target="_blank">
+            <a href="/documents/resume" target="_blank">
               <Button className="mt-6" variant="link">
                 My Resume <Layers className="ml-2.5" size="18" />
               </Button>

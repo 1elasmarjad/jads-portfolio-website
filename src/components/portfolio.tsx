@@ -208,12 +208,11 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </h3>
                 <h3 className="mb-3 text-sm">September 2021 — Present</h3>
                 <p className="text-sm">
-                  Pursuing a Major in{" "}
-                  <strong>Geographic Information Systems</strong> and a minor in{" "}
-                  <strong>Computer Science</strong> and{" "}
-                  <strong>Statistics</strong>. I have taken courses in Spatial
-                  Data Science, Software Design, Software Tools, Systems
-                  Programming, Probability & Modeling, etc.
+                  Pursuing a double Major in <strong>Computer Science</strong>{" "}
+                  and <strong>Geographic Information Systems</strong>. I have
+                  taken courses in Spatial Data Science, Software Design,
+                  Software Tools, Systems Programming, Probability & Modeling,
+                  etc.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>3.4 GPA</Badge>
@@ -229,8 +228,6 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                       <Badge>GIS</Badge>
                     </>
                   )}
-
-                  <Badge>Stats</Badge>
                 </ul>
               </div>
 
@@ -274,9 +271,11 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   <strong className="text-foreground">40,000+</strong> active
                   users. The bot features advanced image generation for custom
                   cards, efficient caching mechanisms and a scalable
-                  architecture designed to handle the growing user base. <strong>7+
-                  million card packs opened; hundreds of millions of bot
-                  interactions.</strong>
+                  architecture designed to handle the growing user base.{" "}
+                  <strong>
+                    7+ million card packs opened; hundreds of millions of bot
+                    interactions.
+                  </strong>
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>Python</Badge>
@@ -359,7 +358,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   <p className="text-sm">
                     A live flask web-app that visualizes various disasters in
                     and around the USA. The app uses the NASA API and USGS API
-                    to fetch real-time data and displays it on a interactive map.
+                    to fetch real-time data and displays it on a interactive
+                    map.
                   </p>
                   <ul className="mt-3 flex gap-2">
                     <Badge>Flask</Badge>
@@ -454,7 +454,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               </Link>
 
               <Link
-                href="https://otp-sharer.vercel.app/"
+                href="https://otp.jadportfolio.com"
                 target="_blank"
                 className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
               >

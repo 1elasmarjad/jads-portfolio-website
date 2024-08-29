@@ -269,14 +269,14 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </h3>
                 <h3 className="mb-3 text-sm">April 2021 — Present</h3>
                 <p className="text-sm">
-                  Founder and sole-developer of a card-collecting discord bot
-                  that interacts with the discord API with{" "}
+                  Founder and developer of a card-collecting discord bot that
+                  interacts with the discord API with{" "}
                   <strong className="text-foreground">40,000+</strong> active
-                  users. In addition to the core functionality of card
-                  collection, the bot features advanced image generation for
-                  custom cards, efficient caching mechanisms to ensure fast
-                  response times, and a scalable architecture designed to handle
-                  the growing user base.
+                  users. The bot features advanced image generation for custom
+                  cards, efficient caching mechanisms and a scalable
+                  architecture designed to handle the growing user base. <strong>7+
+                  million card packs opened; hundreds of millions of bot
+                  interactions.</strong>
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>Python</Badge>

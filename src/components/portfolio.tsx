@@ -14,6 +14,7 @@ import OTPSharer from "images/otp-sharer.png";
 import ColorSwitch from "images/color-switch.png";
 import FanFund from "images/fanfund.png";
 import Gitmoji from "images/gitmoji.png";
+import DisasterImage from "images/disaster.png";
 import { useEffect, useState } from "react";
 import { TextEffect } from "~/components/ui/texteffect";
 
@@ -199,8 +200,9 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   Pursuing a Major in{" "}
                   <strong>Geographic Information Systems</strong> and a minor in{" "}
                   <strong>Computer Science</strong> and{" "}
-                  <strong>Statistics</strong>. I have taken courses in Spatial Data Science, Software
-                  Design, Software Tools, Systems Programming, Probability & Modeling, etc.
+                  <strong>Statistics</strong>. I have taken courses in Spatial
+                  Data Science, Software Design, Software Tools, Systems
+                  Programming, Probability & Modeling, etc.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>3.4 GPA</Badge>
@@ -258,12 +260,12 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 <p className="text-sm">
                   Founder and sole-developer of a card-collecting discord bot
                   that interacts with the discord API with{" "}
-                  <strong className="text-foreground">40,000+</strong> active users. In
-                  addition to the core functionality of card collection, the bot
-                  features advanced image generation for custom cards, efficient
-                  caching mechanisms to ensure fast response times, and a
-                  scalable architecture designed to handle the growing user
-                  base.
+                  <strong className="text-foreground">40,000+</strong> active
+                  users. In addition to the core functionality of card
+                  collection, the bot features advanced image generation for
+                  custom cards, efficient caching mechanisms to ensure fast
+                  response times, and a scalable architecture designed to handle
+                  the growing user base.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>Python</Badge>
@@ -330,6 +332,34 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
 
             <div className="flex flex-col gap-8">
               <Link
+                href="https://github.com/1elasmarjad/disaster-management"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={DisasterImage}
+                  alt={"USA Disaster Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    USA Disaster Management <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    A live flask web-app that visualizes various disasters in
+                    and around the USA. The app uses the NASA API and USGS API
+                    to fetch real-time data and displays it on a map.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Flask</Badge>
+                    <Badge>Python</Badge>
+                    <Badge className="hidden md:block">Javascript</Badge>
+                    <Badge>Leaflet.js</Badge>
+                  </ul>
+                </div>
+              </Link>
+
+              <Link
                 href="https://multiplayer-wordle-five.vercel.app/"
                 target="_blank"
                 className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
@@ -385,6 +415,34 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               </Link>
 
               <Link
+                href="https://github.com/1elasmarjad/membership-platform"
+                target="_blank"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+              >
+                <Image
+                  src={FanFund}
+                  alt={"FanFund Image"}
+                  className="w-[30%] object-scale-down"
+                />
+                <div className="w-[70%]">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                    FanFund Donate to Creators <ExternalLinkIcon size="18" />
+                  </h3>
+                  <p className="text-sm">
+                    A platform that allows fans to donate to creators using
+                    Stripe. The platform allows creators to create a page to
+                    accept donations and fans to donate to creators.
+                  </p>
+                  <ul className="mt-3 flex gap-2">
+                    <Badge>Next.js</Badge>
+                    <Badge>SQLlite</Badge>
+                    <Badge>Stripe</Badge>
+                    <Badge className="hidden md:block">Auth</Badge>
+                  </ul>
+                </div>
+              </Link>
+
+              <Link
                 href="https://otp-sharer.vercel.app/"
                 target="_blank"
                 className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
@@ -408,32 +466,6 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                     <Badge>Next.js</Badge>
                     <Badge>SQLite</Badge>
                     <Badge>Auth</Badge>
-                  </ul>
-                </div>
-              </Link>
-
-              <Link
-                href="https://github.com/1elasmarjad/patreon-discord-bot"
-                target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
-              >
-                <Image
-                  src={PatreonDiscordBot}
-                  alt={"Patron Discord Bot Image"}
-                  className="w-[30%] object-scale-down"
-                />
-                <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                    Patreon Discord Bot <ExternalLinkIcon size="18" />
-                  </h3>
-                  <p className="text-sm">
-                    A cli tool that allows discord bot owners to easily
-                    integrate their bot with Patreon. The tool allows bot owners
-                    to manually sync roles from patreon and find patreon
-                    information given a discord user id.
-                  </p>
-                  <ul className="mt-3 flex gap-2">
-                    <Badge>Python</Badge>
                   </ul>
                 </div>
               </Link>
@@ -466,29 +498,27 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               </Link>
 
               <Link
-                href="https://github.com/1elasmarjad/membership-platform"
+                href="https://github.com/1elasmarjad/patreon-discord-bot"
                 target="_blank"
                 className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
               >
                 <Image
-                  src={FanFund}
-                  alt={"FanFund Image"}
+                  src={PatreonDiscordBot}
+                  alt={"Patron Discord Bot Image"}
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
                   <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
-                    FanFund Donate to Creators <ExternalLinkIcon size="18" />
+                    Patreon Discord Bot <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
-                    A platform that allows fans to donate to creators using
-                    Stripe. The platform allows creators to create a page to
-                    accept donations and fans to donate to creators.
+                    A cli tool that allows discord bot owners to easily
+                    integrate their bot with Patreon. The tool allows bot owners
+                    to manually sync roles from patreon and find patreon
+                    information given a discord user id.
                   </p>
                   <ul className="mt-3 flex gap-2">
-                    <Badge>Next.js</Badge>
-                    <Badge>SQLlite</Badge>
-                    <Badge>Stripe</Badge>
-                    <Badge className="hidden">Auth</Badge>
+                    <Badge>Python</Badge>
                   </ul>
                 </div>
               </Link>

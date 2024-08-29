@@ -71,7 +71,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <h2 className="flex items-center text-lg font-semibold text-foreground/90">
                 {spec === "gis"
                   ? "Full-Stack GIS Developer"
-                  : "Full-Stack-Developer"}
+                  : "Full-Stack Developer"}
 
                 <Rocket size="18" className="ml-2" />
               </h2>

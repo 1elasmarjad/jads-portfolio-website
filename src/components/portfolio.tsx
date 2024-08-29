@@ -359,7 +359,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   <p className="text-sm">
                     A live flask web-app that visualizes various disasters in
                     and around the USA. The app uses the NASA API and USGS API
-                    to fetch real-time data and displays it on a map.
+                    to fetch real-time data and displays it on a interactive map.
                   </p>
                   <ul className="mt-3 flex gap-2">
                     <Badge>Flask</Badge>
@@ -371,7 +371,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               </Link>
 
               <Link
-                href="https://multiplayer-wordle-five.vercel.app/"
+                href="https://wordle.jadportfolio.com"
                 target="_blank"
                 className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
               >

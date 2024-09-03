@@ -202,8 +202,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               EDUCATION
             </h2>
             <div className="flex flex-col gap-10">
-              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
-                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
                   Bachelor of Science · University of Toronto
                 </h3>
                 <h3 className="mb-3 text-sm">September 2021 — Present</h3>
@@ -231,8 +231,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </ul>
               </div>
 
-              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
-                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
                   Secondary School Diploma · Garth Webb Secondary School
                 </h3>
                 <h3 className="mb-3 text-sm">September 2017 — July 2021</h3>
@@ -256,11 +256,11 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
 
             <div className="flex flex-col gap-10">
               <Link
-                className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
                 href={"https://top.gg/bot/785719830640328704"}
                 target="_blank"
               >
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                   Founder & Developer · Discord Bot{" "}
                   <ExternalLinkIcon size="18" />
                 </h3>
@@ -286,11 +286,11 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               </Link>
 
               <Link
-                className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
                 href={"https://www.diffcord.com"}
                 target="_blank"
               >
-                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                   Co-Founder & Developer · Diffcord{" "}
                   <ExternalLinkIcon size="18" />
                 </h3>
@@ -315,8 +315,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </ul>
               </Link>
 
-              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all hover:bg-foreground/10 lg:px-6">
-                <h3 className="mb-1 font-semibold text-foreground group-hover:text-primary">
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
                   Line Cook · Turtle Jack's Muskoka Grill
                 </h3>
                 <h3 className="mb-3 text-sm">July 2021 — June 2022</h3>
@@ -344,7 +344,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://github.com/1elasmarjad/disaster-management"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={DisasterImage}
@@ -352,7 +352,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     USA Disaster Management <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
@@ -373,7 +373,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://wordle.jadportfolio.com"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={WorldeImage}
@@ -381,7 +381,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     Multiplayer Worlde <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
@@ -401,7 +401,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://github.com/1elasmarjad/gitmoji-cli"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={Gitmoji}
@@ -409,7 +409,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     GitMoji AI <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
@@ -428,7 +428,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://github.com/1elasmarjad/membership-platform"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={FanFund}
@@ -436,7 +436,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     FanFund Donate to Creators <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
@@ -456,7 +456,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://otp.jadportfolio.com"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={OTPSharer}
@@ -464,7 +464,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     OneTime Password Sharer <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
@@ -484,7 +484,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://www.fortnite.com/@pumpie"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={ColorSwitch}
@@ -492,7 +492,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     Fortnite Maps <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
@@ -511,7 +511,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               <Link
                 href="https://github.com/1elasmarjad/patreon-discord-bot"
                 target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all hover:cursor-pointer hover:bg-foreground/10 lg:px-6"
+                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
               >
                 <Image
                   src={PatreonDiscordBot}
@@ -519,7 +519,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   className="w-[30%] object-scale-down"
                 />
                 <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all group-hover:text-primary">
+                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
                     Patreon Discord Bot <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">

@@ -204,15 +204,15 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
             <div className="flex flex-col gap-10">
               <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
                 <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
-                  Bachelor of Science · University of Toronto
+                  Computer Science · University of Toronto
                 </h3>
                 <h3 className="mb-3 text-sm">September 2021 — Present</h3>
                 <p className="text-sm">
-                  Pursuing a double Major in <strong>Computer Science</strong>{" "}
-                  and <strong>Geographic Information Systems</strong>. I have
-                  taken courses in Spatial Data Science, Software Design,
-                  Software Tools, Systems Programming, Probability & Modeling,
-                  etc.
+                  Bachelor of Science · Double Major in{" "}
+                  <strong>Computer Science</strong> and{" "}
+                  <strong>Geographic Information Systems</strong>. I have taken
+                  courses in Spatial Data Science, Software Design, Software
+                  Tools, Systems Programming, Probability & Modeling, etc.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>3.4 GPA</Badge>

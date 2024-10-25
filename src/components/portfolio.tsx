@@ -84,8 +84,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   </>
                 ) : (
                   <>
-                    I create seamless and scalable
-                    <br /> digital solutions.
+                    UofT Computer Science student <br />
+                    with a passion and drive to learn.
                   </>
                 )}
               </p>

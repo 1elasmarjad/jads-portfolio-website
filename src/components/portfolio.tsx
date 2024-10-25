@@ -268,7 +268,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 <p className="text-sm">
                   Founder and developer of a card-collecting discord bot that
                   interacts with the discord API with{" "}
-                  <strong className="text-foreground">40,000+</strong> active
+                  <strong className="text-foreground">45,000+</strong> active
                   users. The bot features advanced image generation for custom
                   cards, efficient caching mechanisms and a scalable
                   architecture designed to handle the growing user base.{" "}

@@ -167,26 +167,25 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               ABOUT
             </h2>
             <p>
-              I'm a software developer with a passion for turning ideas into
+              I'm a CS & GIS double major with a passion for turning ideas into
               code and solving real problems.
             </p>
             <br />
             <p>
-              In 2017, I wrote my first line of code. I was convinced I was
-              creating the next big video game. (Plot twist: I wasn't). But that
-              was the start of my coding journey.
+              8 years ago I wrote my first line of code. I was convinced I was
+              creating the next big video game. (I wasn't). But that was the
+              start of my coding journey.
             </p>
 
             <br />
             <p>
               When I'm not coding, you can find me lifting weights, in the
-              boxing gym or diving into self improvement books and podcasts.
+              boxing gym, gaming or listening to audio-books & podcasts.
             </p>
             <br />
             <p>
-              My goal? To build stuff that actually helps people that doesn't
-              suck. If I can leave behind some clean code and a smile, I'll call
-              it a win.
+              My goal is to build stuff that actually helps people that doesn't
+              suck. If I do that, I'll call it a win.
             </p>
           </section>
 
@@ -357,9 +356,8 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                     Accel Web Design <ExternalLinkIcon size="18" />
                   </h3>
                   <p className="text-sm">
-                    I reached-out, developed & designed
-                    several websites, primary for small businesses in the health
-                    sector.
+                    I reached-out, developed & designed several websites,
+                    primary for small businesses in the health sector.
                   </p>
                   <ul className="mt-3 flex gap-2">
                     <Badge>Next.JS</Badge>

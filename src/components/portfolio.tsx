@@ -215,8 +215,6 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                   Tools, Systems Programming, Probability & Modeling, etc.
                 </p>
                 <ul className="mt-3 flex gap-2">
-                  <Badge>3.4 GPA</Badge>
-
                   {spec === "gis" ? (
                     <>
                       <Badge>GIS</Badge>

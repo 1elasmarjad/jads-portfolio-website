@@ -15,7 +15,6 @@ import ColorSwitch from "images/color-switch.png";
 import FanFund from "images/fanfund.png";
 import Gitmoji from "images/gitmoji.png";
 import DisasterImage from "images/disaster.png";
-import AccelImage from "images/accel.png";
 import { useEffect, useState } from "react";
 import { TextEffect } from "~/components/ui/texteffect";
 
@@ -167,7 +166,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
               ABOUT
             </h2>
             <p>
-              I'm a CS & GIS double major with a passion for turning ideas into
+              I'm a Computer Science major with a passion for turning ideas into
               code and solving real problems.
             </p>
             <br />
@@ -206,7 +205,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
                   Computer Science · University of Toronto
                 </h3>
-                <h3 className="mb-3 text-sm">September 2021 — Present</h3>
+                <h3 className="mb-3 text-sm">September 2021 — June 2026</h3>
                 <p className="text-sm">
                   Bachelor of Science · Double Major in{" "}
                   <strong>Computer Science</strong> and{" "}
@@ -229,7 +228,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </ul>
               </div>
 
-              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
+              {/* <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
                 <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
                   Secondary School Diploma · Garth Webb Secondary School
                 </h3>
@@ -243,7 +242,7 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 <ul className="mt-3 flex gap-2">
                   <Badge>High Honors</Badge>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </section>
 
@@ -253,9 +252,42 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
             </h2>
 
             <div className="flex flex-col gap-10">
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
+                  Software Engineer Intern · Jitto{" "}
+                </h3>
+                <h3 className="mb-3 text-sm">Jan 2025 — Present</h3>
+                <p className="text-sm">
+                  Full-stack engineer at Jitto, where I’ve been working on
+                  customer-facing systems, admin tools and logistics
+                  automation's using Python.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Python</Badge>
+                  <Badge>AWS</Badge>
+                  <Badge>JavaScript</Badge>
+                </ul>
+              </div>
+
+              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6">
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
+                  ML Engineer · Google Developer Club @ UofT{" "}
+                </h3>
+                <h3 className="mb-3 text-sm">Dec 2024 — Present</h3>
+                <p className="text-sm">
+                  Developing ML models under mentorship of 2 experts and 1
+                  professor at the University of Toronto, to help students study
+                  better.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>PyTorch</Badge>
+                  <Badge>Machine Learning</Badge>
+                </ul>
+              </div>
+
               <Link
                 className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
-                href={"https://top.gg/bot/785719830640328704"}
+                href={env.NEXT_PUBLIC_DISCORD_URL}
                 target="_blank"
               >
                 <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
@@ -264,22 +296,39 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </h3>
                 <h3 className="mb-3 text-sm">April 2021 — Present</h3>
                 <p className="text-sm">
-                  Founder and developer of a card-collecting discord bot that
-                  interacts with the discord API with{" "}
-                  <strong className="text-foreground">45,000+</strong> active
-                  users. The bot features advanced image generation for custom
-                  cards, efficient caching mechanisms and a scalable
-                  architecture designed to handle the growing user base.{" "}
-                  <strong>
-                    7+ million card packs opened; hundreds of millions of bot
-                    interactions.
-                  </strong>
+                  Solo-founder and developer of a top 0.1% Discord App with
+                  45,000+ active users. The app is built on GCP using Python,
+                  MongoDB, SQL, Go.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>Python</Badge>
                   <Badge>MongoDB</Badge>
                   <Badge>GCP</Badge>
                   <Badge>Stripe</Badge>
+                </ul>
+              </Link>
+
+              <Link
+                className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
+                href={"https://www.accelwebdesign.com/"}
+                target="_blank"
+              >
+                <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
+                  Web Developer · Accel Web Design{" "}
+                  <ExternalLinkIcon size="18" />
+                </h3>
+                <h3 className="mb-3 text-sm">Oct 2023 — Feb 2023</h3>
+                <p className="text-sm">
+                  Developed several websites for small businesses in the health
+                  sector.
+                </p>
+                <ul className="mt-3 flex gap-2">
+                  <Badge>Node.js</Badge>
+                  <Badge>React</Badge>
+                  <Badge>Javascript</Badge>
+                  <Badge>Go</Badge>
+                  <Badge>MySQL</Badge>
+                  <Badge className="hidden sm:block">PayPal</Badge>
                 </ul>
               </Link>
 
@@ -294,42 +343,19 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
                 </h3>
                 <h3 className="mb-3 text-sm">March 2023 — September 2023</h3>
                 <p className="text-sm">
-                  Co-Founder and developer of a SaaS product that helps discord
-                  bot owners generate revenue from advertisements. The platform
-                  amassed <strong className="text-foreground">15,000+</strong>{" "}
-                  active users in the first 2 weeks. Built with a scalable
-                  architecture deployed on Vercel, the platform also leverages
-                  Google Cloud Platform (GCP) for microservices. It integrates
-                  with Stripe and PayPal to handle payouts and payments.
+                  Technical Lead for a SaaS application for Discord Apps.
+                  Supported 15,000+ users in 10 days of launch and ~550,000
+                  monthly visits.
                 </p>
                 <ul className="mt-3 flex gap-2">
                   <Badge>Node.js</Badge>
                   <Badge>React</Badge>
-                  <Badge>Next.js</Badge>
+                  <Badge>Javascript</Badge>
                   <Badge>Go</Badge>
                   <Badge>MySQL</Badge>
                   <Badge className="hidden sm:block">PayPal</Badge>
-                  <Badge className="hidden lg:block">Tailwind</Badge>
                 </ul>
               </Link>
-
-              <div className="group flex flex-col rounded-md px-2.5 py-4 transition-all sm:hover:bg-foreground/10 lg:px-6">
-                <h3 className="mb-1 font-semibold text-foreground sm:group-hover:text-primary">
-                  Line Cook · Turtle Jack's Muskoka Grill
-                </h3>
-                <h3 className="mb-3 text-sm">July 2021 — June 2022</h3>
-                <p className="text-sm">
-                  Line cook at Turtle Jack's Muskoka Grill, Burlington ON.
-                  Multi-tasked to meet customer demands, prepared food items
-                  consistently and adhered to all recipe standards. Developed
-                  creative menu ideas and implemented them.
-                </p>
-                <ul className="mt-3 flex gap-2">
-                  <Badge>Cooking</Badge>
-                  <Badge>Speed</Badge>
-                  <Badge>High-Pressure</Badge>
-                </ul>
-              </div>
             </div>
           </section>
 
@@ -339,33 +365,6 @@ export default function Portfolio({ spec }: { spec: "gis" | "cs" }) {
             </h2>
 
             <div className="flex flex-col gap-8">
-              <Link
-                href="https://www.accelwebdesign.com/"
-                target="_blank"
-                className="group flex gap-4 rounded-md px-2.5 py-4 transition-all sm:hover:cursor-pointer sm:hover:bg-foreground/10 lg:px-6"
-              >
-                <Image
-                  src={AccelImage}
-                  alt={"Accel Web Design"}
-                  className="w-[30%] object-scale-down"
-                />
-                <div className="w-[70%]">
-                  <h3 className="mb-1 flex items-center gap-2 font-semibold text-foreground transition-all sm:group-hover:text-primary">
-                    Accel Web Design <ExternalLinkIcon size="18" />
-                  </h3>
-                  <p className="text-sm">
-                    I reached-out, developed & designed several websites,
-                    primary for small businesses in the health sector.
-                  </p>
-                  <ul className="mt-3 flex gap-2">
-                    <Badge>Next.JS</Badge>
-                    <Badge>Wordpress</Badge>
-                    <Badge className="hidden md:block">Javascript</Badge>
-                    <Badge>PHP</Badge>
-                  </ul>
-                </div>
-              </Link>
-
               <Link
                 href="https://github.com/1elasmarjad/disaster-management"
                 target="_blank"
